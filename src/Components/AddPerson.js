@@ -5,7 +5,7 @@ const AddPerson = (props) => {
 
 	const addSubmit = (e) => {
 		e.preventDefault();
-
+		// call addPerson using props and create an object with key of name and the value you put in input
 		props.addPerson({
 			name: e.target[0].value,
 		});

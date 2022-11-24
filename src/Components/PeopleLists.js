@@ -1,4 +1,5 @@
 const PeopleLists = ({ people, deleteProfile }) => {
+	// loop through the object data of people
 	return (
 		<div className='people__list'>
 			{people.map((person, value) => {
