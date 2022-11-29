@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import AddPerson from "../Components/AddPerson";
 import PeopleLists from "../Components/PeopleLists";
-import People from "../Components/Peoples";
 
 const data = [
 	{
@@ -17,7 +16,7 @@ const data = [
 		name: "levis",
 	},
 ];
-const Home = (state) => {
+const Home = (props) => {
 	// call your data to state in order to access in child component
 	const [people, setPeople] = useState(data);
 
@@ -33,12 +32,13 @@ const Home = (state) => {
 		setPeople((people) => {
 			return people.filter((value, i) => i !== index);
 		});
+		// console.log(setPeople);
 	};
 
 	return (
 		<div className='people max-w-3xl'>
+			<h1>Poeples List</h1>
 			<header className='flex justify-between'>
-				<h1>Poeples List</h1>
 				<div className='person__count'>{people.length}</div>
 			</header>
 

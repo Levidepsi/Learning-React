@@ -5,13 +5,17 @@ import About from "./Pages/About";
 import ExpenseScreen from "./Pages/ExpenseScreen";
 import Home from "./Pages/Home";
 
-function App() {
+function App(props) {
 	return (
 		<>
 			<Navigation />
 			<Routes>
 				<Route path='/' element={<Home />} />
-				<Route path='/about' element={<About />} />
+				<Route
+					path='/about'
+					state={{ data: props.people }}
+					element={<About />}
+				/>
 				<Route path='/expense-screen' element={<ExpenseScreen />} />
 			</Routes>
 		</>

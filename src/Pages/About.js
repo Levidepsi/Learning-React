@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { addPerson } from "./Home";
 
-const About = () => {
+const About = (props) => {
+	// console.log(addPerson);
 	return <div>About</div>;
 };
 
